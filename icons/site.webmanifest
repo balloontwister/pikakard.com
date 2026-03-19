@@ -1,0 +1,13 @@
+{
+  "name": "Pikakard",
+  "short_name": "Pikakard",
+  "description": "Draw tarot, playing cards, and flash cards",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0d0c1d",
+  "theme_color": "#0d0c1d",
+  "icons": [
+    { "src": "/icons/pika-symbol.png",       "sizes": "293x293", "type": "image/png" },
+    { "src": "/icons/pika-logo-primary.png", "sizes": "811x811", "type": "image/png" }
+  ]
+}
