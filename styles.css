@@ -409,18 +409,13 @@ section { scroll-margin-top: 64px; padding: 88px 16px; }
 }
 
 .contact-form-wrap {
+  position: relative;
+  height: 520px;
   max-width: 640px;
   margin: 0 auto;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
-}
-
-.contact-form-wrap iframe {
-  display: block;
-  width: 100%;
-  min-height: 520px;
-  border: none;
   background: var(--bg);
 }
 
