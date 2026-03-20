@@ -315,6 +315,27 @@ section { scroll-margin-top: 64px; padding: 88px 16px; }
   line-height: 1.65;
 }
 
+/* Coming-soon deck card */
+.deck-card--soon {
+  opacity: 0.55;
+  border-top-color: var(--muted);
+  position: relative;
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2px 10px;
+  margin-bottom: 10px;
+}
+
 /* ── Download ──────────────────────────────────────────────────────────── */
 #download { background: var(--card); text-align: center; }
 
@@ -370,6 +391,37 @@ section { scroll-margin-top: 64px; padding: 88px 16px; }
   background: var(--border);
   vertical-align: middle;
   margin: 0 10px;
+}
+
+/* ── Support ───────────────────────────────────────────────────────────── */
+#support { background: var(--card); }
+
+.support-email {
+  text-align: center;
+  color: var(--subtle);
+  font-size: 0.95rem;
+  margin-bottom: 36px;
+}
+
+.support-email a {
+  color: var(--brand-2);
+  font-weight: 600;
+}
+
+.contact-form-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.contact-form-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 520px;
+  border: none;
+  background: var(--bg);
 }
 
 /* ── Footer ────────────────────────────────────────────────────────────── */
