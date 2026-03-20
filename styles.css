@@ -410,7 +410,7 @@ section { scroll-margin-top: 64px; padding: 88px 16px; }
 
 .contact-form-wrap {
   position: relative;
-  height: 520px;
+  height: 320px;
   max-width: 640px;
   margin: 0 auto;
   border-radius: var(--radius);
