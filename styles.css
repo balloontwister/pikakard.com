@@ -302,6 +302,14 @@ section { scroll-margin-top: 64px; padding: 88px 16px; }
 
 .deck-card:nth-child(3) { border-top-color: var(--brand-2); }
 
+.deck-thumb {
+  width: 64px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
 .deck-card h3 {
   color: #fff;
   font-size: 1.05rem;
