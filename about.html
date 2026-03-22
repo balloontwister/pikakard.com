@@ -8,6 +8,43 @@
   <link rel="icon"             href="icons/pika-symbol.png" type="image/png" />
   <link rel="apple-touch-icon" href="icons/pika-logo-primary.png" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-hero {
+      text-align: center;
+      padding: 3.5rem 1.5rem 3rem;
+      border-bottom: 1px solid #2a2940;
+    }
+    .about-hero img.caricature {
+      width: 200px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(124,111,247,0.25);
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .about-hero h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .about-hero .tagline {
+      font-size: 1.05rem;
+      color: #b0afd0;
+      margin-bottom: 0.75rem;
+    }
+    .about-hero .version {
+      font-size: 0.8rem;
+      color: #8b8aaa;
+    }
+    @media (min-width: 600px) {
+      .about-hero img.caricature { width: 240px; }
+      .about-hero h1 { font-size: 2.4rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -23,21 +60,27 @@
         <a href="/#features">Features</a>
         <a href="/#decks">Decks</a>
         <a href="/#download">Download</a>
+        <a href="https://app.pikakard.com/resources.html" target="_blank" rel="noopener">Resources</a>
         <a href="https://app.pikakard.com" class="btn cta" target="_blank" rel="noopener">Open App</a>
       </div>
     </nav>
   </div>
 
+  <div class="about-hero">
+    <img
+      class="caricature"
+      src="images/todd-caricature-tarot_3cardspread.jpg"
+      alt="Todd holding three tarot cards"
+    />
+    <h1>Pick a card.<br>Any card.</h1>
+    <p class="tagline">A minimalist card-drawing app for tarot, playing cards, and flash cards.</p>
+    <p class="version">Version 1.0</p>
+  </div>
+
   <div class="prose-page">
-    <a class="back-link" href="/">← Back to Pikakard</a>
 
-    <div class="logo-row">
-      <img src="icons/pika-logo-primary.png" alt="Pikakard logo" />
-      <h1>Pikakard</h1>
-    </div>
-    <p class="meta">Version 1.0</p>
-
-    <p>Pikakard is a minimalist card-drawing app for tarot, playing cards, and flash cards.</p>
+    <h2>About Pikakard</h2>
+    <p>Pikakard is built for people who want to draw cards without distraction. Choose your deck, deal a spread, flip your cards, and explore their meanings — that's it. No ads, no subscriptions, no account required.</p>
 
     <h2>Developer</h2>
     <p>Todd Neufeld<br />
@@ -46,11 +89,11 @@
     <h2>Website</h2>
     <p><a href="https://pikakard.com">pikakard.com</a></p>
 
-    <h2>Deck attributions</h2>
-    <p>The Marseille Tarot is a reproduction of the tarot deck printed in Marseille by Nicholas Conver in 1760, restored and adapted and released to the community from Yoav Ben Dov, <a href="https://cbdtarot.com/the-cards/" target="_blank" rel="noopener">cbdtarot.com</a>.</p>
+    <h2>Deck Attributions</h2>
+    <p>The Marseille Tarot is a reproduction of the tarot deck printed in Marseille by Nicholas Conver in 1760, restored, adapted and released to the community by Yoav Ben Dov at <a href="https://cbdtarot.com/the-cards/" target="_blank" rel="noopener">cbdtarot.com</a>.</p>
     <p>Rider-Waite-Smith Tarot images (1909), illustrated by Pamela Colman Smith. Public domain. Sourced from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a>.</p>
 
-    <h2>Open source</h2>
+    <h2>Open Source</h2>
     <p>Pikakard is built with <a href="https://react.dev" target="_blank" rel="noopener">React</a> (MIT) and <a href="https://lucide.dev" target="_blank" rel="noopener">Lucide</a> (ISC). We're grateful to the open source community.</p>
 
     <div class="page-footer">
