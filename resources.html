@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — Pikakard</title>
+  <link rel="canonical" href="https://pikakard.com/resources.html" />
+  <link rel="icon" href="icons/pika-symbol.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/pika-logo-primary.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0c1d;
+      --bg-2:     #13122a;
+      --bg-card:  #181730;
+      --border:   #2a2940;
+      --text:     #e0dff5;
+      --muted:    #8b8aaa;
+      --dim:      #b0afd0;
+      --accent:   #7c6ff7;
+      --accent-h: #a39af9;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Nav ── */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(13,12,29,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .nav-brand span {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--text); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.85rem !important;
+      font-weight: 600;
+      transition: background 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--accent-h) !important; color: #fff !important; }
+
+    /* ── Page header ── */
+    .page-header {
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: var(--dim);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── Content ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+      margin: 2.5rem 0 1rem;
+    }
+
+    /* ── Resource cards ── */
+    .resource-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 560px) {
+      .resource-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .resource-card {
+      display: block;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.25rem 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+
+    .resource-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .resource-card .label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .resource-card h3 {
+      font-size: 0.975rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .resource-card p {
+      font-size: 0.85rem;
+      color: var(--dim);
+      line-height: 1.55;
+    }
+
+    /* ── Affiliate disclosure ── */
+    .disclosure {
+      margin-top: 3rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    .footer a { color: var(--muted); text-decoration: none; }
+    .footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://pikakard.com">
+      <img src="icons/pika-logo-primary.png" alt="Pikakard logo" />
+      <span>Pikakard</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="https://app.pikakard.com" class="nav-cta" target="_blank" rel="noopener">Open App</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page header -->
+  <div class="page-header">
+    <h1>Resources</h1>
+    <p>Curated books, decks, and links to help you on your card reading journey.</p>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+
+    <p class="section-label">Learn — Courses &amp; Books</p>
+    <div class="resource-grid">
+
+      <a class="resource-card" href="https://shop.magicalwisdom.com/i/magic-master-classes" target="_blank" rel="noopener">
+        <div class="label">Live Course</div>
+        <h3>Tarot Master Class with Jeff McBride</h3>
+        <p>The fastest way to learn to read tarot cards — an in-person class taught by world-renowned magician and mystic Jeff McBride at his Magic &amp; Mystery School.</p>
+      </a>
+
+      <a class="resource-card" href="https://www.amazon.com/Tarot-History-Symbolism-Divination/dp/1585423491/?tag=balloonshow-20" target="_blank" rel="noopener sponsored">
+        <div class="label">Book</div>
+        <h3>The Tarot: History, Symbolism, and Divination</h3>
+        <p>By Robert M. Place. A beautifully researched guide to tarot's origins, symbolism, and practice — essential reading for anyone serious about the cards.</p>
+      </a>
+
+      <a class="resource-card" href="https://www.amazon.com/dp/B0BLQYMT7F/?tag=balloonshow-20" target="_blank" rel="noopener sponsored">
+        <div class="label">Book</div>
+        <h3>The Functional Tarot</h3>
+        <p>By Izolda Trakhtenberg. A practical guidebook from a busy professional reader — packed with real-world advice on how to interpret cards and read tarot with confidence and professionalism.</p>
+      </a>
+
+    </div>
+
+    <p class="section-label">Shop — Recommended Decks</p>
+    <div class="resource-grid">
+
+      <a class="resource-card" href="https://www.amazon.com/dp/0880794968/?tag=balloonshow-20" target="_blank" rel="noopener sponsored">
+        <div class="label">Deck</div>
+        <h3>Universal Waite Tarot Deck</h3>
+        <p>The deck used in Pikakard. A refined recoloring of the classic Rider-Waite-Smith — the most widely used tarot deck in the world, and the best starting point for new readers.</p>
+      </a>
+
+      <a class="resource-card" href="https://www.amazon.com/dp/1572819677/?tag=balloonshow-20" target="_blank" rel="noopener sponsored">
+        <div class="label">Deck</div>
+        <h3>Universal Waite Tarot Deck in a Tin</h3>
+        <p>The same beloved Universal Waite deck in a compact tin — perfect for travel or as a gift.</p>
+      </a>
+
+      <a class="resource-card" href="https://www.amazon.com/dp/1572819049/?tag=balloonshow-20" target="_blank" rel="noopener sponsored">
+        <div class="label">Deck</div>
+        <h3>CBD Tarot de Marseille</h3>
+        <p>The restored Tarot de Marseille by Yoav Ben Dov — the same historic deck featured in Pikakard, faithful to the 1760 Conver original.</p>
+      </a>
+
+    </div>
+
+    <p class="section-label">For Professional Readers</p>
+    <div class="resource-grid">
+
+      <a class="resource-card" href="https://managersal.com" target="_blank" rel="noopener">
+        <div class="label">Business Tool</div>
+        <h3>ManagerSal.com</h3>
+        <p>The best booking system for freelance readers — go from contacts to contracts in moments. Work smarter, not harder, and convey a professional image to your clients.</p>
+      </a>
+
+    </div>
+
+    <div class="disclosure">
+      <strong>Affiliate disclosure:</strong> Some links on this page are affiliate links. If you purchase through them, Pikakard may earn a small commission at no extra cost to you. We only recommend products we genuinely believe in.
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Todd Neufeld. All rights reserved. &nbsp;·&nbsp;
+      <a href="about.html">About</a> &nbsp;·&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
