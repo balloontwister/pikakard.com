@@ -160,7 +160,7 @@ section { scroll-margin-top: 64px; padding: 88px 16px; }
 }
 
 /* ── Hero ──────────────────────────────────────────────────────────────── */
-#hero {
+#top {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
@@ -177,7 +177,7 @@ section { scroll-margin-top: 64px; padding: 88px 16px; }
   border-radius: 20px;
 }
 
-#hero h1 {
+#top h1 {
   font-size: clamp(42px, 7vw, 74px);
   font-weight: 900;
   color: var(--brand);
